@@ -1,40 +1,15 @@
 import React from 'react';
-import styled from 'styled-components';
-
-const HeaderBlock = styled.div`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 80px;
-`;
-
-const HeaderTitle = styled.h3`
-    font-size: 24px;
-    color: #fff;
-    margin: 0;
-`;
-
-const HeaderLinks = styled.ul`
-    display: flex;
-    margin: 0;
-    align-items: center;
-    color: #fff;
-    list-style-type: none;
-    li {
-        margin-right: 20px;
-        font-size: 18px;
-    }
-`;
+import './header.css';
 
 const Header = () => {
 	return (
-		<HeaderBlock>
-			<HeaderTitle>
+		<div className='header-block d-flex justify-content-between align-items-center'>
+			<div className='header-title'>
 				<a href="http://localhost:3000/">
 					Game of Thrones DB
 				</a>
-			</HeaderTitle>
-			<HeaderLinks>
+			</div>
+			<div className='header-links d-flex align-items-center'>
 				<li>
 					<a href="http://localhost:3000/">Characters</a>
 				</li>
@@ -44,8 +19,8 @@ const Header = () => {
 				<li>
 					<a href="http://localhost:3000/">Books</a>
 				</li>
-			</HeaderLinks>
-		</HeaderBlock>
+			</div>
+		</div>
 	);
 };
 
