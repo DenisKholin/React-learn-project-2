@@ -4,20 +4,15 @@
 }
 
 .spinner-wrapper {
-	width: 526px;
-	height: 251px;
+	width: 100%;
+	height: 203px;
 	display: inline-block;
 	overflow: hidden;
-	background: #ffffff;
-	margin-bottom: 40px;
-	border-radius: 5px;
 }
 
 .spinner-content {
 	width: 100%;
 	height: 100%;
-	position: relative;
-	transform: translateZ(0) scale(1);
 	backface-visibility: hidden;
 	transform-origin: 0 0; 
 	display: flex;

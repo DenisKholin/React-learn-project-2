@@ -22,13 +22,26 @@ export default class GotService {
 		return this._transformCharacter(character);
 	}
 
+	fillEmptyData = data => {
+		for (let key in data) {
+			if (!data[key] || data[key] === '' || data[key] === undefined || data[key] === null || data[key] === 0) {
+				data[key] = 'no info :(';
+			}
+		}
+	}
+
 	_transformCharacter(char) {
+		console.log(char)
+		this.fillEmptyData(char);
+
 		return {
 			name: char.name,
 			gender: char.gender,
 			born: char.born,
-			death: char.death,
+			death: char.died,
 			culture: char.culture
 		}
 	}
+
+
 }
