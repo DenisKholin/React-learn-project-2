@@ -1,0 +1,36 @@
+@keyframes spinner-content {
+	0% { transform: rotate(0deg); }
+	100% { transform:  rotate(360deg); }
+}
+
+.spinner-wrapper {
+	width: 526px;
+	height: 251px;
+	display: inline-block;
+	overflow: hidden;
+	background: #ffffff;
+	margin-bottom: 40px;
+	border-radius: 5px;
+}
+
+.spinner-content {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform: translateZ(0) scale(1);
+	backface-visibility: hidden;
+	transform-origin: 0 0; 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.spinner-content div {
+	width: 35px;
+	height: 35px;
+	border: 4px solid #0c1d53;
+	border-top-color: transparent;
+	border-radius: 50%;
+	animation: spinner-content 0.7s linear infinite;
+	box-sizing: content-box; 
+}
