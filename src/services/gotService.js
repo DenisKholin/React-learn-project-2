@@ -31,7 +31,6 @@ export default class GotService {
 	}
 
 	_transformCharacter(char) {
-		console.log(char)
 		this.fillEmptyData(char);
 
 		return {
