@@ -4,15 +4,18 @@ import Header from '../header/header';
 import RandomChar from '../randomChar/randomChar';
 import ErrorMessage from '../errorMessage/errorMessage';
 import CharacterPage from '../characterPage/characterPage';
+import ItemList from '../itemList/itemList';
+import CharDetails from '../charDetails/charDetails';
+import GotService from '../../services/gotService';
 
 
 export default class App extends Component {
+	gotService = new GotService();
+
 	state = {
 		toggle: true,
 		error: false
 	}
-
-
 
 	toggleRandomChar = () => {
 		this.setState({ toggle: !this.state.toggle })
@@ -39,6 +42,26 @@ export default class App extends Component {
 						</Col>
 					</Row>
 					<CharacterPage />
+					{/* <Row>
+						<Col md='6'>
+							<ItemList
+								onCharSelected={this.onCharSelected}
+								getData={this.gotService.getAllBooks} />
+						</Col>
+						<Col md='6'>
+							<CharDetails charId={this.state.selectedChar} />
+						</Col>
+					</Row>
+					<Row>
+						<Col md='6'>
+							<ItemList
+								onCharSelected={this.onCharSelected}
+								getData={this.gotService.getAllHouses} />
+						</Col>
+						<Col md='6'>
+							<CharDetails charId={this.state.selectedChar} />
+						</Col>
+					</Row> */}
 				</Container>
 			</>
 		);
