@@ -5,7 +5,7 @@ import RandomChar from '../randomChar/randomChar';
 import ErrorMessage from '../errorMessage/errorMessage';
 import CharacterPage from '../characterPage/characterPage';
 import ItemList from '../itemList/itemList';
-import CharDetails from '../charDetails/charDetails';
+import CharDetails from '../itemDetails/itemDetails';
 import GotService from '../../services/gotService';
 
 
