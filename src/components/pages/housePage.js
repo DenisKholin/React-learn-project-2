@@ -6,11 +6,11 @@ import ItemList from '../itemList/itemList';
 import RowBlock from '../rowBlock/rowBlock';
 
 
-export default class BookPage extends Component {
+export default class HousePage extends Component {
 	gotService = new GotService();
 
 	state = {
-		selectedBook: null,
+		selectedHouse: null,
 		error: false
 	}
 
@@ -22,7 +22,7 @@ export default class BookPage extends Component {
 
 	onItemSelected = id => {
 		this.setState({
-			selectedBook: id
+			selectedHouse: id
 		})
 	}
 
@@ -36,17 +36,18 @@ export default class BookPage extends Component {
 		const itemList = (
 			<ItemList
 				onItemSelected={this.onItemSelected}
-				getData={this.gotService.getAllBooks}
+				getData={this.gotService.getAllHouses}
 				renderItem={(item) => item.name} />
 		)
 
 		const bookDetails = (
 			<ItemDetails
-				itemId={this.state.selectedBook}
-				getData={this.gotService.getBook}>
+				itemId={this.state.selectedHouse}
+				getData={this.gotService.getHouse}>
 				<Field field="name" label="Name" />
-				<Field field="publisher" label="Publisher" />
-				<Field field="released" label="Released" />
+				<Field field="region" label="Region" />
+				<Field field="words" label="Words" />
+				<Field field="overlord" label="Overlord" />
 			</ItemDetails>
 		)
 

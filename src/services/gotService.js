@@ -39,7 +39,7 @@ export default class GotService {
 	}
 
 	getHouse = async (id) => {
-		const house = await this.getResourse(`/books/${id}`);
+		const house = await this.getResourse(`/houses/${id}`);
 		return this._transformHouse(house);
 	}
 
@@ -82,9 +82,7 @@ export default class GotService {
 			name: this.isSet(house.name),
 			region: this.isSet(house.region),
 			words: this.isSet(house.words),
-			titles: this.isSet(house.titles),
 			overlord: this.isSet(house.overlord),
-			ancestralWeapons: this.isSet(house.ancestralWeapons),
 		}
 	}
 
