@@ -3,13 +3,8 @@ import { Col, Row, Container } from 'reactstrap';
 import Header from '../header/header';
 import RandomChar from '../randomChar/randomChar';
 import ErrorMessage from '../errorMessage/errorMessage';
-import CharacterPage from '../pages/characterPage';
-import ItemList from '../itemList/itemList';
-import CharDetails from '../itemDetails/itemDetails';
 import GotService from '../../services/gotService';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import BookPage from '../pages/bookPage';
-import HousePage from '../pages/housePage';
+import { Outlet } from "react-router-dom";
 
 
 export default class App extends Component {
@@ -33,25 +28,23 @@ export default class App extends Component {
 		}
 
 		return (
-			<Router>
-				<div className='app'>
-					<Container>
-						<Header />
-					</Container>
-					<Container>
-						<Row>
-							<Col lg={{ size: 5, offset: 0 }}>
-								{randomChar}
-								<button onClick={this.toggleRandomChar}>Toggle</button>
-							</Col>
-						</Row>
-						<CharacterPage />
-						<BookPage />
-						<HousePage />
-					</Container>
-				</div>
+			// <Router>
+			<div className='app'>
+				<Container>
+					<Header />
+				</Container>
+				<Container>
+					<Row>
+						<Col lg={{ size: 5, offset: 0 }}>
+							{randomChar}
+							<button onClick={this.toggleRandomChar}>Toggle</button>
+						</Col>
+					</Row>
+					<Outlet />
+				</Container>
+			</div>
 
-			</Router>
+			// </Router>
 		);
 	}
 
