@@ -11,7 +11,7 @@ import BooksItem from './components/pages/booksItem';
 const router = createBrowserRouter([
 	{
 		path: "/",
-		element: <App />, sd
+		element: <App />,
 		loader: App.render,
 		children: [
 			{
